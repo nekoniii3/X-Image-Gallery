@@ -1,0 +1,45 @@
+{
+  "userprofile": {
+    "avatarurl": "https://pbs.twimg.com/profile_images/1566064687976189953/AHpvbx_v_400x400.jpg",
+    "username": "@enako_cos",
+    "name": "えなこ 名古屋出身のコスプレイヤーです"
+  },
+  "count": 1,
+  "results": [
+    {
+      "id": "1548912806145454083",
+      "postedat": "2023-07-15T18:30:00Z",
+      "likes": 141853,
+      "imageUrl": "https://pbs.twimg.com/media/GHQQ9O8aQAAL8pv.jpg",
+      "caption": ""
+    },
+    {
+      "id": "1160467071903256577",
+      "postedat": "2023-07-15T18:30:00Z",
+      "likes": 134091,
+      "imageUrl": "https://pbs.twimg.com/media/GAu4FEIaAAAB7Pm.jpg",
+      "caption": ""
+    },
+    {
+      "id": "1749084456961593427",
+      "postedat": "2023-07-15T18:30:00Z",
+      "likes": 107529,
+      "imageUrl": "https://pbs.twimg.com/media/GCBl3HDbQAAdPDf.jpg",
+      "caption": ""
+    },
+    {
+      "id": "1578723371097161731",
+      "postedat": "2023-07-15T18:30:00Z",
+      "likes": 97690,
+      "imageUrl": "https://pbs.twimg.com/media/F7LCaTTaIAEdQh9.jpg",
+      "caption": ""
+    },
+    {
+      "id": "1733087251465380168",
+      "postedat": "2023-07-15T18:30:00Z",
+      "likes": 96660,
+      "imageUrl": "https://pbs.twimg.com/media/F5lQINqasAAYyDh.jpg",
+      "caption": ""
+    }
+  ]
+}
