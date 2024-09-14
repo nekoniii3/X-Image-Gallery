@@ -16,7 +16,7 @@ type UserProfile = {
 }
 
 type Post = {
-  id: number
+  id: string
   postedat: string
   likes: number
   caption: string
@@ -97,7 +97,7 @@ export function Component() {
               type="text"
               placeholder="Enter X Username"
               value="@enako_cos"
-              onChange={(e) => setUsername(e.target.value)}
+              // onChange={(e) => setUsername(e.target.value)}
               className="w-50"
             />
             <Button type="submit">
@@ -163,7 +163,7 @@ export function Component() {
                     Posted on {new Date(post.postedat).toLocaleDateString()}
                 </div>
                 <div className="float-right items-center ml-2">
-                    <DownloadIcon className="w-5 h-5" onClick={() => handleLike(post.id)} />
+                    <DownloadIcon className="w-5 h-5"/>
                 </div>
                 <div className="float-right items-center text-pink-500 hover:text-pink-600 transition-colors" aria-label={`${post.likes} likes`}>
                     {post.likes}
