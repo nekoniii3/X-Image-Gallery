@@ -1,46 +1,39 @@
 'use client'
 
 import { useState } from 'react'
-import { Heart, HeartIcon, MessageCircle, Share2, X, Download, DownloadIcon } from 'lucide-react'
+import { Heart, HeartIcon, MessageCircle, Share2, X, DownloadIcon } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 // import { HeartIcon, MessageCircleIcon, ShareIcon } from "lucide-react"
-import Link from 'next/link'
-import { saveAs } from 'file-saver'
 
 type UserProfile = {
+  // id: string
+  avatarurl: string
+  username: string
   name: string
-  description: string
-  image: string
 }
 
 type Post = {
   id: string
   postedat: string
   likes: number
-  image_url: string
-  video_url: string
   caption: string
+  // username: string
+  // avatarUrl: string
+  imageUrl: string
+  // comments: number
 }
 
-import Dummy from "@/test/test_1.json";
+import Dummy from "@/test/test_data.json";
 
-const userProfile: UserProfile = Dummy.user_profile;
-const posts: Post[] = Dummy.media_data;
+const userProfile: UserProfile = Dummy.userprofile;
+const posts: Post[] = Dummy.results;
 
-const imageDownload = (imageUrl: string) => {
+const handleDownload = (imageUrl: string) => {
   // 実際のアプリケーションでは、ここで画像のダウンロード処理を行います
   console.log(`Downloading image: ${imageUrl}`)
-
-  let link = document.createElement('a')
-  link.href = imageUrl
-  link.download = "FX7X-dXaAAAZ4jU.jpg"
-  // link.target = '_blank'
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link);
 }
 
 const ImageModal = ({ post, onClose }: { post: Post | null, onClose: () => void }) => {
@@ -53,8 +46,7 @@ const ImageModal = ({ post, onClose }: { post: Post | null, onClose: () => void 
     <div className="fixed inset-10 flex items-center justify-center" onClick={onClose}>
       <div className="bg-white rounded-lg overflow-hidden" onClick={e => e.stopPropagation()}>
         <div className="relative">
-          {post.video_url === "" && <img src={post.image_url} alt={post.caption} className="object-cover size-[576px]"/>}
-          {post.video_url != "" && <video src={post.video_url} className="object-cover size-[576px]" controls autoPlay/>}
+          <img src={post.imageUrl} alt={post.caption} className="object-cover size-[576px]"/>
           <Button 
             variant="ghost" 
             size="icon" 
@@ -76,17 +68,17 @@ const ImageModal = ({ post, onClose }: { post: Post | null, onClose: () => void 
           </div> */}
           <p className="text-sm font-semibold mb-2">{post.caption}</p>
           <div>
-            <div className="float-left flex items-center text-sm text-gray-500">
+            <div className="float-left text-sm text-gray-500">
               {new Date(post.postedat).toLocaleDateString()} {new Date(post.postedat).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
             </div>
-            {/* <div className="float-right ml-2 mb-4">
+            <div className="float-right ml-2 mb-4">
               <DownloadIcon className="w-5 h-5" onClick={() => handleDownload(post.imageUrl)}/>
-            </div> */}
+            </div>
             <Button
                 size="icon"
-                variant="text"
-                className="float-right flex items-center mb-4"
-                onClick={() => imageDownload(post.image_url)}
+                variant="outline"
+                className="absolute top-4 right-4 bg-white bg-opacity-75"
+                onClick={() => handleDownload(post.imageUrl)}
               >
                 {/* <Download className="h-4 w-4" />
                 <span className="sr-only">Download image</span> */}
@@ -137,12 +129,12 @@ export default function Component() {
       <Card className="mb-6">
         <CardContent className="flex items-center space-x-4 p-6">
           <Avatar className="w-20 h-20">
-            <AvatarImage src={userProfile.image} alt={userProfile.name} />
+            <AvatarImage src={userProfile.avatarurl} alt={userProfile.name} />
             <AvatarFallback>{userProfile.name}</AvatarFallback>
           </Avatar>
           <div>
             <h2 className="text-2xl font-bold">{userProfile.name}</h2>
-            <p className="text-gray-500">{userProfile.name}</p>
+            <p className="text-gray-500">{userProfile.username}</p>
           </div>
         </CardContent>
       </Card>
@@ -162,7 +154,7 @@ export default function Component() {
               aria-label={`View larger image of ${post.caption}`}
             >
               <img 
-                src={post.image_url} 
+                src={post.imageUrl} 
                 alt={post.caption} 
                 className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
               />
@@ -175,19 +167,9 @@ export default function Component() {
                 <div className="float-left mb-4">
                     Posted {new Date(post.postedat).toLocaleDateString()}
                 </div>
-                {/* <div className="float-right items-center ml-2">
+                <div className="float-right items-center ml-2">
                     <DownloadIcon className="w-5 h-5"/>
-                </div> */}
-                <Button
-                    size="icon"
-                    variant="text"
-                    className="float-right ml-1"
-                    onClick={() =>imageDownload(post.image_url)}
-                  >
-                    {/* <Download className="h-4 w-4" />
-                    <span className="sr-only">Download image</span> */}
-                    <Download className="mb-5"/>
-                </Button>
+                </div>
                 <div className="float-right items-center text-pink-500 hover:text-pink-600 transition-colors" aria-label={`${post.likes} likes`}>
                     {post.likes.toLocaleString()}
                 </div>
