@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 // import { HeartIcon, MessageCircleIcon, ShareIcon } from "lucide-react"
 import Link from 'next/link'
-import { saveAs } from 'file-saver'
+// import { saveAs } from 'file-saver'
 
 type UserProfile = {
   name: string
