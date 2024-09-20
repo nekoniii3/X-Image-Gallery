@@ -84,7 +84,7 @@ const ImageModal = ({ post, onClose }: { post: Post | null, onClose: () => void 
             </div> */}
             <Button
                 size="icon"
-                variant="text"
+                variant="link"
                 className="float-right flex items-center mb-4"
                 onClick={() => imageDownload(post.image_url)}
               >
@@ -180,7 +180,7 @@ export default function Component() {
                 </div> */}
                 <Button
                     size="icon"
-                    variant="text"
+                    variant="link"
                     className="float-right ml-1"
                     onClick={() =>imageDownload(post.image_url)}
                   >
