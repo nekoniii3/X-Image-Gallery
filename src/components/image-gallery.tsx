@@ -17,8 +17,8 @@ import { IoIosPlay } from "react-icons/io";
 // import Link from 'next/link'
 import { Progress } from "@/components/ui/progress"
 
-const API_ENDPOINT = "http://localhost:7860/"
-// const API_ENDPOINT = "https://x-image-api2.vercel.app/"
+// const API_ENDPOINT = "http://localhost:7860/"
+const API_ENDPOINT = "https://x-image-api2.vercel.app/"
 // const INIT_USER = "enako_cos"
 const MAX_DISPLAY = 20
 
