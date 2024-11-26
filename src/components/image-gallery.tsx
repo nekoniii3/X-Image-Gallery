@@ -182,7 +182,7 @@ export default function Component() {
     setSelectedPost(null)
   }
 
-  function search(formData) {
+  function search(formData: any) {
     const username = formData.get("query").replace("@", "");
     request_data(username, 1)
   }
