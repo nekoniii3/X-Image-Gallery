@@ -213,7 +213,7 @@ export default function Component() {
 
     // return
 
-    axios.post(API_ENDPOINT, {filelist:file_list}, {timeout: 50000, withCredentials: true})
+    axios.post(API_ENDPOINT, {username:userName, filelist:file_list}, {timeout: 50000, withCredentials: true})
     .then((response) => {
       // console.log(response.data)
       // setIsDownloading(false)
@@ -418,17 +418,18 @@ export default function Component() {
           disabled={currentPage === 1}
           aria-label="Previous page"
         >
-          Previous
+          &lt;&lt;&lt; Previous
         </Button>
-        <span className="text-sm">
+        {/* <span className="text-sm">
           Page {currentPage} of {totalPages}
-        </span>
+        </span> */}
+        <span>&emsp;</span>
         <Button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
           aria-label="Next page"
         >
-          Next 
+          Next &gt;&gt;&gt;
         </Button>
       </div>
       <ImageModal post={selectedPost} onClose={handleCloseModal} />
