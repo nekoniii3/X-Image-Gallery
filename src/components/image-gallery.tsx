@@ -38,7 +38,7 @@ type Post = {
   caption: string
 }
 
-import Dummy from "@/test/init_data.json";
+// import Dummy from "@/test/init_data.json"
 
 // const userProfile1: UserProfile = Dummy.user_profile;
 // const posts1: Post[] = Dummy.media_data;
