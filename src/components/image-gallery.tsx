@@ -386,6 +386,7 @@ export default function Component() {
           >
             Next &gt;&gt;&gt;
           </Button>
+          <Button variant="link">Link</Button>
         </div>
         <ImageModal post={selectedPost} onClose={handleCloseModal} />
       </div>
