@@ -398,7 +398,7 @@ export default function Component() {
           <Button type="submit" className="">
               Search
           </Button>
-          <button className="bg-black">Next &gt;&gt;&gt;</button>
+          <button onClick={() => handlePageChange(currentPage + 1)} className="bg-black">Next &gt;&gt;&gt;</button>
         </div>
         <ImageModal post={selectedPost} onClose={handleCloseModal} />
       </div>
