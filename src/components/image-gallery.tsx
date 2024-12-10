@@ -372,6 +372,7 @@ export default function Component() {
         </div>
         {/* <div className="mt-8"><hr/></div>
         <div className="mt-8 flex justify-center items-center space-x-2"> */}
+      </div>
         <div>
           <Button
             onClick={() => handlePageChange(currentPage - 1)}
@@ -394,7 +395,6 @@ export default function Component() {
           <button  type="button" onClick={() => handlePageChange(currentPage + 1)} className="bg-black">Next &gt;&gt;&gt;</button>
         </div>
         <ImageModal post={selectedPost} onClose={handleCloseModal} />
-      </div>
     </div>
   )
 }
