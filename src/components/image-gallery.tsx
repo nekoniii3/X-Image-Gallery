@@ -381,7 +381,7 @@ export default function Component() {
         <span>&emsp;</span>
         <Button
           onClick={() => handlePageChange(currentPage + 1)}
-          disabled={false}
+          disabled={endFlg}
           aria-label="Next page"
         >
           Next &gt;&gt;&gt;
