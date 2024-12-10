@@ -370,8 +370,9 @@ export default function Component() {
             </div>
           ))}
         </div>
-        <div className="mt-8"><hr/></div>
-        <div className="mt-8 flex justify-center items-center space-x-2">
+        {/* <div className="mt-8"><hr/></div>
+        <div className="mt-8 flex justify-center items-center space-x-2"> */}
+        <div>
           <Button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
@@ -386,14 +387,6 @@ export default function Component() {
             aria-label="Next page"
           >
             Next &gt;&gt;&gt;
-          </Button>
-          <Button
-              size="icon"
-              variant="link"
-              className="float-right ml-1"
-              onClick={() =>imageDownload("", "")}
-            >
-              <Download className="mb-5"/>
           </Button>
           <Button type="submit" className="">
               Search
