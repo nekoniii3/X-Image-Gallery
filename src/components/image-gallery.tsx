@@ -371,7 +371,7 @@ export default function Component() {
           ))}
         </div>     
       </div>
-      <div className="mt-8 flex justify-center items-center space-x-2">
+      <div className="my-4 flex justify-center items-center space-x-2">
         <Button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
