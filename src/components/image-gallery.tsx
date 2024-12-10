@@ -42,7 +42,7 @@ type Post = {
 }
 
 // const API_ENDPOINT = "http://localhost:7860/"
-const API_ENDPOINT = "https://x-image-api.vercel.app/"
+const API_ENDPOINT = "https://x-image-api-test.vercel.app/"
 
 // import Dummy from "@/test/init_data.json"
 // const userProfile1: UserProfile = Dummy.user_profile;
@@ -381,7 +381,7 @@ export default function Component() {
           <span>&emsp;</span>
           <Button
             onClick={() => handlePageChange(currentPage + 1)}
-            disabled={endFlg}
+            disabled={false}
             aria-label="Next page"
           >
             Next &gt;&gt;&gt;
