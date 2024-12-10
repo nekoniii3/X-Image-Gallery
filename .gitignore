@@ -35,7 +35,14 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# add
-/bak/
+# メモ
 memo.txt
-/work/
+
+# バックアップ
+bak/
+
+# テストデータ
+src/test/
+
+# 作業用フォルダ
+work/
