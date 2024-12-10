@@ -369,32 +369,26 @@ export default function Component() {
               </div>
             </div>
           ))}
-        </div>
-        {/* <div className="mt-8"><hr/></div>
-        <div className="mt-8 flex justify-center items-center space-x-2"> */}
+        </div>     
       </div>
-        <div>
-          <Button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            aria-label="Previous page"
-          >
-            &lt;&lt;&lt; Previous
-          </Button>
-          <span>&emsp;</span>
-          <Button
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={false}
-            aria-label="Next page"
-          >
-            Next &gt;&gt;&gt;
-          </Button>
-          <Button type="submit" className="">
-              Search
-          </Button>
-          <button  type="button" onClick={() => handlePageChange(currentPage + 1)} className="bg-black">Next &gt;&gt;&gt;</button>
-        </div>
-        <ImageModal post={selectedPost} onClose={handleCloseModal} />
+      <div className="mt-8 flex justify-center items-center space-x-2">
+        <Button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          aria-label="Previous page"
+        >
+          &lt;&lt;&lt; Previous
+        </Button>
+        <span>&emsp;</span>
+        <Button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={false}
+          aria-label="Next page"
+        >
+          Next &gt;&gt;&gt;
+        </Button>
+      </div>
+      <ImageModal post={selectedPost} onClose={handleCloseModal} />
     </div>
   )
 }
