@@ -42,7 +42,7 @@ type Post = {
 }
 
 // const API_ENDPOINT = "http://localhost:7860/"
-const API_ENDPOINT = "https://x-image-api-test.vercel.app/"
+const API_ENDPOINT = "https://x-image-api.vercel.app/"
 
 // import Dummy from "@/test/init_data.json"
 // const userProfile1: UserProfile = Dummy.user_profile;
@@ -368,26 +368,26 @@ export default function Component() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="mt-8 flex justify-center items-center space-x-2">
-          <Button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            aria-label="Previous page"
-          >
-            &lt;&lt;&lt; Previous
-          </Button>
-          <span>&emsp;</span>
-          <Button
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={endFlg}
-            aria-label="Next page"
-          >
-            Next &gt;&gt;&gt;
-          </Button>
-        </div>
-        <ImageModal post={selectedPost} onClose={handleCloseModal} />
+        </div>     
       </div>
+      <div className="my-4 flex justify-center items-center space-x-2">
+        <Button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          aria-label="Previous page"
+        >
+          &lt;&lt;&lt; Previous
+        </Button>
+        <span>&emsp;</span>
+        <Button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={false}
+          aria-label="Next page"
+        >
+          Next &gt;&gt;&gt;
+        </Button>
+      </div>
+      <ImageModal post={selectedPost} onClose={handleCloseModal} />
     </div>
   )
 }
