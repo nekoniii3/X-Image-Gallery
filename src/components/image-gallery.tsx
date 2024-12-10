@@ -370,6 +370,7 @@ export default function Component() {
             </div>
           ))}
         </div>
+        <div><hr/></div>
         <div className="mt-8 flex justify-center items-center space-x-2">
           <Button
             onClick={() => handlePageChange(currentPage - 1)}
