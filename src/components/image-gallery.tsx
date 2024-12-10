@@ -221,9 +221,7 @@ export default function Component() {
       ,withCredentials: true
     }).then((response) => {
       if (response.data.user_profile.name != "") {
-
         if (response.data.media_count > 0) {
-
           if (username == "") {
             setUsername(response.data.user_name)
           } else {
@@ -238,6 +236,7 @@ export default function Component() {
           setPostData(
             response.data.media_data
           )
+          console.log(response.data.endflg)
           setEndFlg(
             response.data.endflg
           )
