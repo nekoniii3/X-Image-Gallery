@@ -395,6 +395,9 @@ export default function Component() {
           >
             Link
           </Button>
+          <Button type="submit" className="">
+              Search
+          </Button>
         </div>
         <ImageModal post={selectedPost} onClose={handleCloseModal} />
       </div>
