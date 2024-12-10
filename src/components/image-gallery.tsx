@@ -388,17 +388,17 @@ export default function Component() {
             Next &gt;&gt;&gt;
           </Button>
           <Button
-            variant="link"
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={false}
-            aria-label="Next page"
-          >
-            Link
+              size="icon"
+              variant="link"
+              className="float-right ml-1"
+              onClick={() =>imageDownload("", "")}
+            >
+              <Download className="mb-5"/>
           </Button>
           <Button type="submit" className="">
               Search
           </Button>
-          <button onClick={() => handlePageChange(currentPage + 1)} className="bg-black">Next &gt;&gt;&gt;</button>
+          <button  type="button" onClick={() => handlePageChange(currentPage + 1)} className="bg-black">Next &gt;&gt;&gt;</button>
         </div>
         <ImageModal post={selectedPost} onClose={handleCloseModal} />
       </div>
