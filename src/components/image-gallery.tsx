@@ -386,7 +386,14 @@ export default function Component() {
           >
             Next &gt;&gt;&gt;
           </Button>
-          <Button variant="link">Link</Button>
+          <Button
+            variant="link"
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={false}
+            aria-label="Next page"
+          >
+            Link
+          </Button>
         </div>
         <ImageModal post={selectedPost} onClose={handleCloseModal} />
       </div>
