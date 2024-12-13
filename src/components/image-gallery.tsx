@@ -41,8 +41,9 @@ type Post = {
   caption: string
 }
 
-// const API_ENDPOINT = "http://localhost:7860/"
-const API_ENDPOINT = "https://x-image-api-test.vercel.app/"   // テスト用
+// const API_ENDPOINT = "http://localhost:7860/"   // テスト用
+// const API_ENDPOINT = "https://x-image-api-test.vercel.app/"   // テスト用
+const API_ENDPOINT = "https://x-image-api.vercel.app/"
 
 // import Dummy from "@/test/init_data.json"
 // const userProfile1: UserProfile = Dummy.user_profile;
