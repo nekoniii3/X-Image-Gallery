@@ -42,7 +42,7 @@ type Post = {
 }
 
 // const API_ENDPOINT = "http://localhost:7860/"
-const API_ENDPOINT = "https://x-image-api.vercel.app/"
+const API_ENDPOINT = "https://x-image-api-test.vercel.app/"   // テスト用
 
 // import Dummy from "@/test/init_data.json"
 // const userProfile1: UserProfile = Dummy.user_profile;
@@ -82,7 +82,8 @@ const ImageModal = ({ post, onClose }: { post: Post | null, onClose: () => void 
           <Button 
             variant="ghost" 
             size="icon" 
-            className="absolute m-auto inset-0 bg-white left-[504px] bottom-[504px] bg-opacity-50 hover:bg-opacity-90"
+            // className="absolute m-auto inset-0 bg-white left-[504px] bottom-[504px] bg-opacity-50 hover:bg-opacity-90"
+            className="absolute top-1 right-1 bg-white"
             onClick={onClose}
           >
             <X className="h-6 w-6" />
